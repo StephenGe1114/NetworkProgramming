@@ -3,8 +3,6 @@
  /// @author  gsw(1499186594@qq.com)
  ///
    
-#include <syslog.h>
-#include <sys/wait.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
