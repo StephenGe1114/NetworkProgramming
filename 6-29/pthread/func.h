@@ -3,7 +3,7 @@
  /// @author  gsw(1499186594@qq.com)
  ///
    
-#include <sys/time.h>
+#include <pthread.h>
 #include <signal.h>
 #include <sys/msg.h>
 #include <sys/sem.h>
@@ -37,5 +37,13 @@
 			perror(func_name);               \
 			return -1;                       \
 		}                                    \
+	}
+#define check_thread_error(ret, func_name)               \
+	{                                                    \
+		if (0 != ret)                                    \
+		{                                                \
+			printf("%s is failed %d\n", func_name, ret); \
+			return -1;                                   \
+		}                                                \
 	}
 
